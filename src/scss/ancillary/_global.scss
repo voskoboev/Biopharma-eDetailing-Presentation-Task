@@ -1,0 +1,78 @@
+:root {
+  box-sizing: border-box;
+  font-size: 16px;
+
+  // overflow: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+// body {
+  // width: 100vw;
+  // max-width: 1920px;
+  // margin: 0 auto;
+  // overflow-x: hidden;
+  // font-family: $default-font;
+// }
+
+// .body--inactive {
+//   height: 100%;
+//   overflow: hidden;
+// }
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+// button:hover,
+// input[type='submit']:hover {
+//   text-transform: capitalize;
+//   cursor: pointer;
+//   transition: 0.2s all ease;
+// }
+
+input:focus,
+input:active,
+input:hover,
+textarea:focus,
+textarea:active,
+textarea:hover,
+select:focus,
+select:active,
+select:hover {
+  outline: none;
+}
+
+h1,
+h2, 
+h3,
+h4,
+h5,
+h6,
+p,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+
+// button {
+ 
+// }
+
+// ::selection {
+//   background-color: lighten($secondary-color, 20%);
+// }
+
+// .container {
+  // max-width: 1300px;
+  // margin: 0 auto;
+// }
