@@ -1,6 +1,7 @@
 const { src, dest, parallel, series, watch } = require('gulp')
 const browserSync = require('browser-sync').create()
 const concat = require('gulp-concat')
+const babel = require('gulp-babel')
 const uglify = require('gulp-uglify-es').default
 const sass = require('gulp-sass')
 const autoprefixer = require('gulp-autoprefixer')
@@ -23,6 +24,9 @@ const scripts = () => {
     'src/js/index.js'
   ])
     .pipe(concat('bundle.min.js'))
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
     .pipe(uglify())
     .pipe(dest('src/js/'))
     .pipe(browserSync.stream())
@@ -120,7 +124,7 @@ exports.build = series(
   fonts,
   // videos,
   buildcopy
-  )
+)
 
 exports.default = parallel(
   styles,
@@ -128,4 +132,4 @@ exports.default = parallel(
   // php,
   browsersync,
   startWatch
-  )
+)
