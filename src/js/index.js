@@ -9,7 +9,7 @@ function initSwiper() {
   const swiper = new Swiper(slider, {
     // modules: [],
     speed: 400,
-    initialSlide: 0,
+    initialSlide: 2,
     slidesPerView: 1,
     loop: false,
     slideClass: 'swiper-slide',
@@ -25,7 +25,39 @@ function initSwiper() {
   })
 }
 
-moveDecorationElemsOnLoad()
+// moveToFirstSlide()
+
+function moveToFirstSlide() {
+
+  const wrapper = document.querySelector('.swiper-wrapper')
+
+  const homeBtn = document.querySelector('.header__nav-link')
+  const allSlides = document.querySelectorAll('.swiper-slide')
+  const firstSlide = document.querySelector('.swiper-slide--1')
+  const secondSlide = document.querySelector('.swiper-slide--2')
+
+  const slideActivationClass = 'swiper-slide-active'
+
+  homeBtn.addEventListener('click', ev => {
+    ev.preventDefault()
+
+    allSlides.forEach(item => {
+      item.classList.remove(slideActivationClass)
+      item.classList.remove('swiper-slide-prev')
+      item.classList.remove('swiper-slide-next')
+
+    })
+
+    firstSlide.classList.add(slideActivationClass)
+    secondSlide.classList.add('swiper-slide-next')
+    wrapper.style.transform = 'translate3d(0px, 0px, 0px)'
+    wrapper.style.transitionDuration = '400ms'
+  })
+
+
+}
+
+// moveDecorationElemsOnLoad()
 
 function moveDecorationElemsOnLoad() {
 
@@ -34,8 +66,8 @@ function moveDecorationElemsOnLoad() {
   const bacteriumThree = document.querySelector('.main__bacterium--3')
   const bacteriumFour = document.querySelector('.main__bacterium--4')
   const bacteriumFive = document.querySelector('.main__bacterium--5')
-  const bacteriumSix = document.querySelector('.main__bacterium--6')
-  const bacteriumSeven = document.querySelector('.main__bacterium--7')
+  // const bacteriumSix = document.querySelector('.main__bacterium--6')
+  // const bacteriumSeven = document.querySelector('.main__bacterium--7')
 
 
   window.addEventListener('load', () => {
@@ -49,7 +81,7 @@ function moveDecorationElemsOnLoad() {
   const moveElems = () => { }
 }
 
-moveBacteria()
+// moveBacteria()
 
 function moveBacteria() {
 
@@ -58,18 +90,26 @@ function moveBacteria() {
 
   const slideActivationClass = 'swiper-slide-active'
 
+  // window.addEventListener('mousemove', () => {
+
+  //   if (slide.classList.contains(slideActivationClass)) {
+  //     bacteriaImg.forEach(item => {
+  //       item.classList.add('descr__bacterium-img--active')
+  //     })
+  //   }
+
+  // })
+
   // const observerOptions = {
   //   // childList: true,
   //   attributes: true,
   //   // subtree: true
   // }
-
   // const observer = new MutationObserver(() => {
   //   bacteriaImg.forEach(item => {
   //     item.classList.add('descr__bacterium-img--active')
   //   })
   // })
-
   // observer.observe(slide, observerOptions);
 
 
@@ -79,10 +119,28 @@ function moveBacteria() {
 
   //   console.log('gf');
 
-  // bacteriaImg.forEach(item => {
-  //   item.classList.add('descr__bacterium-img--active')
+  // window.addEventListener('load', () => {
+
+  //   bacteriaImg.forEach(item => {
+  //     item.classList.add('descr__bacterium-img--active')
+  //   })
+
   // })
-  // }
 
+}
 
+// enableScroll()
+
+function enableScroll() {
+
+  const input = document.querySelector('.descr__scroll-input')
+  const block = document.querySelector('.descr__text-container-inner')
+
+  const blockHeight = document.querySelector('.descr__text-container-inner').clientHeight
+
+  const percentHeight = blockHeight / 100
+
+  input.addEventListener('input', () => {
+    block.scrollTop = input.value * percentHeight / 2.1
+  })
 }

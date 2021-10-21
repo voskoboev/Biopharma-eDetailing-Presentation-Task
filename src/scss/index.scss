@@ -49,7 +49,7 @@ body {
   }
 }
 
-.brand {
+.servicer-logo {
   position: fixed;
   width: 55px;
   height: 12.5px;
@@ -85,6 +85,10 @@ body {
 
     background-position: 100%;
 
+
+    // position: absolute;
+    // top: 0;
+    // left: 0;
   }
 }
 
@@ -356,10 +360,45 @@ body {
     margin-bottom: 15px;
   }
 
+  .descr__scroll-input {
+    -webkit-appearance: none;
+
+    width: 430px;
+    height: 5px;
+    background-color: #000;
+
+    position: absolute;
+    top: 450px;
+    left: -130px;
+
+    z-index: 100;
+    cursor: pointer;
+
+    transform: rotate(90deg);
+
+  }
+
+  .descr__scroll-input::-webkit-slider-thumb {
+
+    -webkit-appearance: none;
+    height: 20px;
+    width: 105px;
+    border-radius: 20px;
+    background: #cf578d;
+    cursor: pointer;
+    // box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+
+    box-shadow: inset -5px -5px 5px 0 rgba(0, 0, 0, .5),
+      inset 5px 5px 5px 0 rgba(255, 255, 255, 0.5);
+
+
+  }
+
   .descr__text-container {
     width: 775px;
     height: 445px;
-    position: relative;
+    position: absolute;
+    left: 120px;
 
     box-sizing: border-box; // ?
 
@@ -378,25 +417,16 @@ body {
 
     position: relative;
 
-    overflow-y: scroll;
+
+    overflow-y: auto;
+
   }
 
-  // .simplebar-scrollbar::before {
-  //   background-color: red;
-  //   opacity: 1;
-  //   // width: 50px;
-  //   // height: 100px;
-  //   // z-index: 100;
-  // }
-
-  // .simplebar-scrollbar {
-  // }
-
-  .simplebar-track {
-    background-color: transparent;
-    width: 50px;
-    margin-left: 50px;
+  .descr__text-container-inner::-webkit-scrollbar {
+    appearance: none;
   }
+
+
 
   .descr__text {
     color: #171717;
@@ -418,6 +448,9 @@ body {
 
   .descr__bacterium-img {
     position: absolute;
+
+    opacity: 0;
+    visibility: hidden;
   }
 
   .descr__bacterium-img--active {
@@ -427,10 +460,13 @@ body {
   @keyframes animate-pink-bacteria {
     0% {
       transform: translate(50px, 50px);
+      opacity: 0;
     }
 
     100% {
       transform: translate(0, 0);
+      opacity: .5;
+      visibility: visible;
     }
   }
 
@@ -458,6 +494,8 @@ body {
     right: -80px;
     top: 80px;
     opacity: .5;
+
+    z-index: 10;
   }
 
   .descr__bacterium-img--4 {
@@ -467,6 +505,8 @@ body {
     right: -600px;
     top: 450px;
     opacity: .5;
+
+    z-index: 10;
   }
 
   .descr__bacterium-img--5 {
@@ -475,7 +515,103 @@ body {
     opacity: .5;
     bottom: -50px;
     right: -200px;
+
+    z-index: 10;
   }
 
 
+}
+
+.brand {
+  width: 100%;
+  height: 100%;
+
+  .brand__img {
+    position: absolute;
+  }
+
+  .brand__bottle-img {
+
+    width: 230px;
+    height: 680px;
+
+    bottom: 0;
+    left: 50px;
+  }
+
+  .brand__blue-bubble-img--1 {
+
+    width: 37px;
+    height: 37px;
+
+    top: 70px;
+    left: 200px;
+
+  }
+
+  .brand__blue-bubble-img--2 {
+
+    width: 68px;
+    height: 68px;
+
+    top: 150px;
+    left: 185px;
+
+  }
+
+  .brand__blue-bubble-img--3 {
+
+    width: 33px;
+    height: 33px;
+
+    bottom: 275px;
+    left: 15px;
+
+  }
+
+  .brand__blue-bubble-img--4 {
+
+    width: 62px;
+    height: 62px;
+
+    bottom: 120px;
+    left: 240px;
+
+  }
+
+  .brand__blue-bubble-img--5 {
+
+    width: 142px;
+    height: 142px;
+
+    left: 235px;
+    bottom: -75px;
+
+  }
+
+
+  .brand__pink__bubble-img--1 {
+    left: 75px;
+    top: 210px;
+    width: 34px;
+    height: 34px;
+
+  }
+
+  .brand__pink__bubble-img--2 {
+    width: 112px;
+    height: 112px;
+    left: 185px;
+    top: 310px;
+
+  }
+
+  .brand__pink__bubble-img--3 {
+    width: 75px;
+    height: 75px;
+
+    left: 25px;
+    bottom: 135px;
+
+  }
 }
