@@ -8,6 +8,8 @@ body {
 
   // overflow: hidden;
 
+  box-sizing: border-box;
+
 }
 
 .header {
@@ -525,6 +527,75 @@ body {
 .brand {
   width: 100%;
   height: 100%;
+  padding-left: 210px;
+  padding-top: 160px;
+
+  .brand__modal {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(62, 94, 120, .5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s all ease;
+
+  }
+
+  .brand__modal--active {
+    visibility: visible;
+    opacity: 1;
+    transition: .5s all ease;
+  }
+  
+  .brand__modal-inner {
+    width: 820px;
+    height: 570px;
+    background-color: #fff;
+    position: relative;
+    z-index: 10;
+    margin-left: 100px;
+    border-radius: 50px;
+    opacity: 1;
+
+  }
+
+  .brand__modal-close {
+    position: absolute;
+
+    right: 75px;
+    top: 65px;
+  }
+
+  .swiper--brand {
+    width: 440px;
+    height: 350px;
+    border: 1px solid #000;
+
+    position: absolute;
+    bottom: 0;
+    left: 200px;
+  }
+
+  .brand__slide {
+    // width: 980px;
+    // height: 300px;
+  }
+
+
+
+  .brand__modal-list {
+
+  }
+
+  .brand__modal-list-item {
+
+  }
 
   .brand__img {
     position: absolute;
@@ -537,6 +608,8 @@ body {
 
     bottom: 0;
     left: 50px;
+
+    z-index: 30;
   }
 
   .brand__blue-bubble-img--1 {
@@ -557,6 +630,7 @@ body {
     top: 150px;
     left: 185px;
 
+    z-index: 40;
   }
 
   .brand__blue-bubble-img--3 {
@@ -577,6 +651,8 @@ body {
     bottom: 120px;
     left: 240px;
 
+    z-index: 20;
+
   }
 
   .brand__blue-bubble-img--5 {
@@ -587,31 +663,166 @@ body {
     left: 235px;
     bottom: -75px;
 
+    z-index: 40;
   }
 
 
-  .brand__pink__bubble-img--1 {
+  .brand__pink-bubble-img--1 {
     left: 75px;
     top: 210px;
     width: 34px;
     height: 34px;
 
+  
   }
 
-  .brand__pink__bubble-img--2 {
+  .brand__pink-bubble-img--2 {
     width: 112px;
     height: 112px;
     left: 185px;
     top: 310px;
 
+    z-index: 20;
   }
 
-  .brand__pink__bubble-img--3 {
+  .brand__pink-bubble-img--3 {
     width: 75px;
     height: 75px;
 
     left: 25px;
     bottom: 135px;
 
+    transform: rotate(65deg);
+
+    z-index: 40;
+  }
+
+  .brand__key-message {
+    color: #242424;
+    font-family: "DIN Pro";
+    font-size: 27px;
+    font-weight: 400;
+    letter-spacing: 0.64px;
+
+    text-transform: uppercase;
+
+    margin-left: 134px;
+
+    line-height: 70%;
+
+    margin-bottom: 30px;
+
+    position: relative;
+    z-index: 10;
+  }
+
+  .brand__title {
+    line-height: 70%;
+
+    color: #242424;
+    font-size: 90px;
+    text-transform: uppercase;
+    font-family: "Gilroy";
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 4.15px;
+    margin-left: 130px;
+
+    margin-bottom: 90px;
+
+    z-index: 10;
+
+    position: relative;
+  }
+
+  .brand__title-span {
+    font-weight: 700;
+    margin-left: -20px;
+  }
+
+
+
+  .brand__grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(80px, auto);
+
+    width: 712px;
+    height: 265px;
+
+    grid-gap: 65px 35px;
+
+    box-sizing: border-box;
+
+  }
+
+  .brand__text-containter--big {
+    grid-column: 1 / 1;
+    grid-row: 1 / 3;
+
+    background-color: #fff;
+
+    width: 415px;
+
+    border-radius: 50px;
+
+    padding: 50px 45px 75px 130px;
+
+    position: relative;
+
+    box-shadow: 3px 4px 114px 9px rgba(157, 185, 198, 0.39);
+  }
+
+  .brand__text-containter--big::before {
+    content: url(../images/brand-page/plate.webp);
+    width: 68px;
+    height: 63px;
+
+    position: absolute;
+    left: 130px;
+    top: -25px;
+  }
+
+  .brand__text-container--small {
+    height: 150px;
+    background-color: #fff;
+
+    border-radius: 50px;
+
+    padding: 50px 70px 50px 40px;
+
+    box-shadow: 3px 4px 115px 9px rgba(157, 185, 198, 0.39);
+
+    position: relative;
+  }
+
+  .brand__text-container--small::before {
+    content: url('../images/brand-page/calendar.webp');
+    width: 70px;
+    height: 58px;
+
+    position: absolute;
+    top: -25px;
+    left: 40px;
+  }
+
+  .button__grid-wrapper {
+    grid-column: 2 / 2;
+    grid-row: 2 / 3;
+
+    display: grid;
+    align-items: end;
+  }
+
+  .brand__text {
+    color: #2e2e2e;
+    font-family: "DIN Pro";
+    font-size: 25px;
+    font-weight: 400;
+  }
+
+  .brand__btn {
+    width: 260px; // ?
+    z-index: 0; // ?
   }
 }

@@ -1,6 +1,6 @@
-initSwiper()
+initHeroSwiper()
 
-function initSwiper() {
+function initHeroSwiper() {
   const slider = document.querySelector('.swiper')
 
   // Swiper.use([Navigation])
@@ -16,7 +16,7 @@ function initSwiper() {
     navigation: {
       // nextEl: '.swiper-button-next',
       nextEl: '.main__btn',
-      prevEl: '.swiper-button-prev'
+      // prevEl: '.swiper-button-prev'
     },
     pagination: {
       el: '.swiper-pagination',
@@ -25,12 +25,41 @@ function initSwiper() {
   })
 }
 
+initBrandSwiper()
+
+function initBrandSwiper() {
+  const slider1 = document.querySelector('.swiper--brand')
+
+  // Swiper.use([Naviga
+  // eslint-disable-next-line no-unused-vars
+  const swiper1 = new Swiper(slider1, {
+    // modules: [],
+    speed: 400,
+    initialSlide: 0,
+    slidesPerView: 1,
+    loop: false,
+    slideClass: 'brand__slide',
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets'
+    },
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    }
+  })
+
+
+}
+
 // moveToFirstSlide()
 
 function moveToFirstSlide() {
-
   const wrapper = document.querySelector('.swiper-wrapper')
-
   const homeBtn = document.querySelector('.header__nav-link')
   const allSlides = document.querySelectorAll('.swiper-slide')
   const firstSlide = document.querySelector('.swiper-slide--1')
@@ -45,7 +74,6 @@ function moveToFirstSlide() {
       item.classList.remove(slideActivationClass)
       item.classList.remove('swiper-slide-prev')
       item.classList.remove('swiper-slide-next')
-
     })
 
     firstSlide.classList.add(slideActivationClass)
@@ -53,8 +81,6 @@ function moveToFirstSlide() {
     wrapper.style.transform = 'translate3d(0px, 0px, 0px)'
     wrapper.style.transitionDuration = '400ms'
   })
-
-
 }
 
 // moveDecorationElemsOnLoad()
@@ -144,3 +170,24 @@ function enableScroll() {
     block.scrollTop = input.value * percentHeight / 2.1
   })
 }
+
+toggleModal()
+
+function toggleModal() {
+  const openBtn = document.querySelector('.brand__btn'),
+    closeBtn = document.querySelector('.brand__modal-close'),
+    modal = document.querySelector('.brand__modal'),
+    activationClass = 'brand__modal--active'
+
+  const openModal = () => {
+    modal.classList.add(activationClass)
+  }
+
+  const closeModal = () => {
+    modal.classList.remove(activationClass)
+  }
+
+  openBtn.addEventListener('click', openModal)
+  closeBtn.addEventListener('click', closeModal)
+}
+
