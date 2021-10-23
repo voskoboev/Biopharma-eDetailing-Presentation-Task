@@ -18,7 +18,7 @@
 // }
 
 @mixin font(
-  $family: $default-font,
+  $family: sans-serif,
   $weight: 400,
   $size: 1rem,
   $color: initial
@@ -31,15 +31,3 @@
 
   color: $color;
 }
-
-@mixin flex($jcc: initial, $aic: initial, $flw: initial, $fld: initial) {
-  display: flex;
-  align-items: $aic;
-  justify-content: $jcc;
-
-  flex: {
-    wrap: $flw;
-    direction: $fld;
-  }
-}
-

@@ -1,17 +1,14 @@
-$primary-color: #202b30;
-$secondary-color: #fb414e;
+$accent-color: #fc6da9;
+$dark-color: #242424;
+$light-color: #fff;
 
-$primary-font-color: #1f1f1f;
-$secondary-font-color: #838383;
 
 // $dark-font-color: #000;
 // $light-font-color: #fff;
 
-// $default-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu,
-//   Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 
-$primary-font: Roboto;
-$secondary-font: 'Source Sans Pro';
+$primary-font: Gilroy;
+$secondary-font: 'DIN Pro';
 
 %centering-flex-container {
   display: flex;
