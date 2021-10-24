@@ -63,18 +63,13 @@ const images = () => {
 }
 
 const cleanimg = () => {
-  return del('src/images/**/*', { force: true }) // dest/
+  return del('src/images/**/*', { force: true })
 }
 
 const fonts = () => {
   return src('src/fonts/**/*')
     .pipe(dest('src/fonts/'))
 }
-
-// const videos = () => {
-//   return src('src/videos/**/*')
-//     .pipe(dest('src/videos/'))
-// }
 
 const cleandist = () => {
   return del('dist/**/*', { force: true })
@@ -85,10 +80,8 @@ const buildcopy = () => {
     [
       'src/css/**/*.min.css',
       'src/js/**/*.min.js',
-      // 'src/php/**/*.php',
       'src/images/**/*',
       'src/fonts/**/*',
-      // 'src/videos/**/*',
       'src/**/*.html'
     ],
     { base: 'src/' }
@@ -100,18 +93,15 @@ const startWatch = () => {
   watch('src/**/*.html').on('change', browserSync.reload)
   watch('src/**/*.scss', styles)
   watch(['src/**/*.js', '!src/**/*.min.js'], scripts)
-  // watch('src/php/**/*', php)
   watch('src/images/**/*', images)
   watch('src/fonts/**/*', fonts)
 }
 
 exports.browsersync = browsersync
 exports.scripts = scripts
-// exports.php = php
 exports.styles = styles
 exports.images = images
 exports.fonts = fonts
-// exports.videos = videos
 exports.cleanimg = cleanimg
 exports.cleandist = cleandist
 
@@ -119,17 +109,14 @@ exports.build = series(
   cleandist,
   styles,
   scripts,
-  // php,
   images,
   fonts,
-  // videos,
   buildcopy
 )
 
 exports.default = parallel(
   styles,
   scripts,
-  // php,
   browsersync,
   startWatch
 )

@@ -1,15 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Onpoint Task</title>
-
+  <meta name="author" content="Dmitry Voskoboev">
+  <meta name="description" content="Biopharma eDetailing Presentation">
+  <meta name="keywords" content="bio, pharma, presentation, eDetailing, products">
+  <!-- og -->
+  <meta property="og:title" content="Biopharma eDetailing Presentation">
+  <meta property="og:description" content="Presentation provides information about biopharmaceutical products">
+  <!-- /og -->
+  <!-- fonts preload -->
+  <link rel="preload" href="./fonts/Circe-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/DINPro.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Gilroy-Extrabold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Gilroy-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Gilroy-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- /fonts preload -->
+  <title>Biopharma eDetailing Presentation</title>
   <link rel="stylesheet" href="css/bundle.min.css">
-
   <script src="./js/bundle.min.js" defer></script>
 </head>
 
@@ -17,7 +28,7 @@
   <header class="header">
     <nav class="header__nav">
       <div class="header__nav--left">
-          <img src="./images/hero-page/home.png" alt="home" class="header__nav-img">
+        <img src="./images/hero-page/home.png" alt="home" class="header__nav-img">
       </div>
       <div class="header__nav--right">
         Project
@@ -26,70 +37,62 @@
   </header>
   <img src="./images/hero-page/brand.webp" alt="brand" class="servicer-logo">
   <div class="swiper">
-    <div class="swiper-wrapper swiper-wrapper--main">
+    <div class="swiper-wrapper">
       <div class="swiper-slide swiper-slide--1">
-        <main class="main">
-          <img src="./images/hero-page/bacterium-1.webp" alt="bacterium-1" class="main__bg-img main__bacterium--1">
-          <img src="./images/hero-page/bacterium-2.webp" alt="bacterium-2" class="main__bg-img main__bacterium--2">
-          <img src="./images/hero-page/bacterium-3.webp" alt="bacterium-3" class="main__bg-img main__bacterium--3">
-          <img src="./images/hero-page/bacterium-4.webp" alt="bacterium-4" class="main__bg-img main__bacterium--4">
-          <img src="./images/hero-page/bacterium-5.webp" alt="bacterium-5" class="main__bg-img main__bacterium--5">
-          <img src="./images/hero-page/bacterium-6.webp" alt="bacterium-6" class="main__bg-img main__bacterium--6">
-          <img src="./images/hero-page/bacterium-7.webp" alt="bacterium-7" class="main__bg-img main__bacterium--7">
-          <div class="main__bacterium-shadow--1">
+        <section class="hero">
+          <img src="./images/hero-page/bacterium-1.webp" alt="bacterium-1" class="hero__bg-img hero__bacterium--1">
+          <img src="./images/hero-page/bacterium-2.webp" alt="bacterium-2" class="hero__bg-img hero__bacterium--2">
+          <img src="./images/hero-page/bacterium-3.webp" alt="bacterium-3" class="hero__bg-img hero__bacterium--3">
+          <img src="./images/hero-page/bacterium-4.webp" alt="bacterium-4" class="hero__bg-img hero__bacterium--4">
+          <img src="./images/hero-page/bacterium-5.webp" alt="bacterium-5" class="hero__bg-img hero__bacterium--5">
+          <img src="./images/hero-page/bacterium-6.webp" alt="bacterium-6" class="hero__bg-img hero__bacterium--6">
+          <img src="./images/hero-page/bacterium-7.webp" alt="bacterium-7" class="hero__bg-img hero__bacterium--7">
+          <div class="hero__bacterium-shadow--1">
           </div>
-          <div class="main__bacterium-shadow--2">
+          <div class="hero__bacterium-shadow--2">
           </div>
-
-
-          <h1 class="main__title">
-            <span class="main__title-span">
+          <h2 class="hero__title">
+            <span class="hero__title-span">
               Привет,
             </span> <br>
             Это
-            <strong class="main__title-strong">
+            <strong class="hero__title-strong">
               не
             </strong> <br>
             коммерческое задание
-          </h1>
-          <button class="btn main__btn">
-            <div class="btn__circle-wrapper">
-              <div class="btn__circle">
-                <img src="./images/common/arrow-white.webp" alt="arrow" class="btn__arrow">
-              </div>
+          </h2>
+          <div class="btn hero__btn">
+            <div class="btn__circle">
+              <img src="./images/common/arrow-white.webp" alt="arrow" class="btn__icon">
             </div>
             <p class="btn__text">
               Что дальше?
             </p>
-          </button>
-        </main>
-
-
+          </div>
+        </section>
       </div>
       <div class="swiper-slide swiper-slide--2">
         <section class="descr">
           <img src="./images/description-page/bacterium-pink.webp" alt="bacterium-1"
-            class="descr__bacterium-img descr__bacterium-img--1">
+            class="bacterium-img--primary-loaded descr__bacterium-img descr__bacterium-img--1">
           <img src="./images/description-page/bacterium-pink.webp" alt="bacterium-2"
-            class="descr__bacterium-img descr__bacterium-img--2">
+            class="bacterium-img--primary-loaded descr__bacterium-img descr__bacterium-img--2">
           <img src="./images/description-page/bacterium-pink.webp" alt="bacterium-3"
-            class="descr__bacterium-img descr__bacterium-img--3">
+            class="bacterium-img--secondary-loaded descr__bacterium-img descr__bacterium-img--3">
           <img src="./images/description-page/bacterium-pink.webp" alt="bacterium-4"
-            class="descr__bacterium-img descr__bacterium-img--4">
+            class="bacterium-img--primary-loaded descr__bacterium-img descr__bacterium-img--4">
           <img src="./images/description-page/bacterium-pink.webp" alt="bacterium-5"
-            class="descr__bacterium-img descr__bacterium-img--5">
-
+            class="bacterium-img--secondary-loaded descr__bacterium-img descr__bacterium-img--5">
           <h2 class="descr__title">
             Текст <br>
             сообщения
           </h2>
-
           <input class="descr__scroll-input" type="range" min="1" max="100" value="1">
-
           <div class="descr__text-container">
             <div class="descr__text-container-inner">
               <p class="descr__text">
-                <strong>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit, sed do
+                <strong class="descr__text-strong">Lorem ipsum dolor sit amet</strong>,
+                consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Duis ut diam quam nulla. Mauris in aliquam sem fringilla ut morbi
                 tincidunt. Vitae aliquet nec ullamcorper sit amet risus nullam eget
@@ -117,16 +120,14 @@
           </div>
         </section>
       </div>
-
       <div class="swiper-slide swiper-slide--3">
         <section class="brand">
           <div class="brand__modal">
             <div class="brand__modal-inner">
               <img class="brand__modal-close" src="./images/brand-page/close.webp" alt="close-icon">
-
-              <div class="swiper--brand">
-                <div class="swiper-wrapper swiper-wrapper--brand">
-                  <div class="swiper-slide brand__slide">
+              <div class="brand__swiper">
+                <div class="swiper-wrapper brand__swiper-wrapper">
+                  <div class="swiper-slide brand__swiper-slide">
                     <ul class="brand__modal-list brand__modal-list--1">
                       <li class="brand__modal-list-item">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit
@@ -139,12 +140,11 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="swiper-slide brand__slide">
+                  <div class="swiper-slide brand__swiper-slide">
                     <ul class="brand__modal-list brand__modal-list--2">
                       <li class="brand__modal-list-item">
                         Mi bibendum neque egestas congue quisque
                         egestas diam
-
                       </li>
                       <li class="brand__modal-list-item">
                         Venenatis lectus magna fringilla urna
@@ -154,18 +154,15 @@
                       </li>
                     </ul>
                   </div>
-
                 </div>
-                
               </div>
-              <div class="swiper-buttons-container">
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next"></div>
+              <div class="brand__swiper-btns-container">
+                <div class="brand__swiper-btn-prev"></div>
+                <div class="brand__swiper-pagination"></div>
+                <div class="brand__swiper-btn-next"></div>
               </div>
             </div>
           </div>
-
           <img src="./images/brand-page/bottle.webp" alt="bottle" class="brand__img brand__bottle-img">
           <img src="./images/brand-page/blue_bubble.webp" alt="blue-bubble-1"
             class="brand__img brand__blue-bubble-img--1">
@@ -177,20 +174,17 @@
             class="brand__img brand__blue-bubble-img--4">
           <img src="./images/brand-page/dark-blue-bubble.webp" alt="dark-blue-bubble"
             class="brand__img brand__blue-bubble-img--5">
-
           <img src="./images/brand-page/dark_pink_bubble.webp" alt="pink-bubble-1"
             class="brand__img brand__pink-bubble-img--1">
           <img src="./images/brand-page/pink_bubble1.webp" alt="pink-bubble-2"
             class="brand__img brand__pink-bubble-img--2">
           <img src="./images/brand-page/pink_bubble1.webp" alt="pink-bubble-3"
             class="brand__img brand__pink-bubble-img--3">
-
-
           <h3 class="brand__key-message">
             Ключевое сообщение
           </h3>
           <h2 class="brand__title">
-            BREND <strong class="brand__title-span">XY</strong>
+            Brend <strong class="brand__title-strong">XY</strong>
           </h2>
           <div class="brand__grid-container">
             <div class="brand__text-containter--big">
@@ -202,40 +196,27 @@
                 risus ultricies
               </p>
             </div>
-
             <div class="brand__text-container--small">
               <p class="brand__text">
                 A arcu
                 cursus vitae
               </p>
             </div>
-            <div class="button__grid-wrapper">
-              <button class="btn brand__btn">
-                <div class="btn__circle-wrapper">
-                  <div class="btn__circle">
-                    <img src="./images/common/plus.webp" alt="arrow" class="btn__arrow">
-                  </div>
+            <div class="brand__btn-grid-wrapper">
+              <div class="btn brand__btn">
+                <div class="btn__circle">
+                  <img src="./images/common/plus.webp" alt="arrow" class="btn__icon brand__btn-icon">
                 </div>
                 <p class="btn__text">
                   Подробнее
                 </p>
-              </button>
+              </div>
             </div>
-
           </div>
         </section>
-
-
       </div>
-
     </div>
-
-    <!-- <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div> -->
-
   </div>
-
-
 </body>
 
 </html>
