@@ -5,7 +5,7 @@
 - Valid, optimized;
 - Required resolution: 1024x768;
 - Gulp, Normalize.css, SCSS, Vanilla JS, Babel, Swiper.js, ESLint, Prettier, Stylelint;
-- [Hosted Site](https://biopharma-presentation.netlify.app/).
+- [Hosted Site](https://sb-personal-page.000webhostapp.com/).
 
 ### Get Started:
 
